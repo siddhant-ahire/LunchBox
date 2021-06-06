@@ -1,0 +1,31 @@
+.Slider {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+  }
+
+.cGKbZh {
+    background-color: transparent !important;
+    box-shadow: 0 0 2px 0px transparent !important;
+}
+
+.ehkxHv {
+    background-color: transparent !important;
+    box-shadow: 0 0 2px 0px transparent !important;
+
+}
+
+.cGKbZh:hover:enabled, .cGKbZh:focus:enabled{
+    color: #333 !important;
+    border: none !important;
+}
+
+.ejXxNI {
+
+    background-color: #0abf53 !important;
+
+    box-shadow: 0 0 1px 3px #0abf53 !important;
+
+}

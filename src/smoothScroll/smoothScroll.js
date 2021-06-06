@@ -22,7 +22,7 @@ const SmoothScroll = ({ children }) => {
   useEffect(() => {
     setBodyHeight();
   }, [windowSize.height]);
-
+console.log(scrollingContainerRef.current)
   const setBodyHeight = () => {
     document.body.style.height = `${
       scrollingContainerRef.current.getBoundingClientRect().height
@@ -38,12 +38,14 @@ const SmoothScroll = ({ children }) => {
     data.current = window.scrollY;
     data.previous += (data.current - data.previous) * data.ease;
     data.rounded = Math.round(data.previous * 100) / 100;
-
+    
     scrollingContainerRef.current.style.transform = `translateY(-${data.previous}px)`;
-
+    
     // Recursive call
     requestAnimationFrame(() => smoothScrollingHandler());
   };
+  
+  console.log(scrollingContainerRef.current)
 
   return (
     <div className="parent">

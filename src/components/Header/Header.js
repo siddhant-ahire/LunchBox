@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, makeStyles } from '@material-ui/core'
-import { Mail, Home, RestaurantMenu, Payment, Group, ContactPhone, Menu, WbSunny, NightsStay } from '@material-ui/icons'
+import { Mail, Home, RestaurantMenu, Payment, Group, ContactPhone, Menu, WbSunny, NightsStay, AttachMoney } from '@material-ui/icons'
 import './Header.css'
 
 const useStyles = makeStyles({
@@ -56,6 +56,12 @@ const Header = () => {
                                         <ListItem button>
                                             <ListItemIcon> <RestaurantMenu /> </ListItemIcon>
                                             <ListItemText primary={"Menu"} />
+                                        </ListItem>
+                                    </List>
+                                    <List>
+                                        <ListItem button>
+                                            <ListItemIcon> <AttachMoney /> </ListItemIcon>
+                                            <ListItemText primary={"Prices"} />
                                         </ListItem>
                                     </List>
                                     <List>

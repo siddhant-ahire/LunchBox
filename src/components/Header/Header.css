@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 991px){
+    .header .navbar {
+      padding:1rem !important;
+    }
+    .mobileSearch .MuiListItem-root {
+        justify-content: center;
+    }
+  }
+  
+  @media only screen and (max-width: 991px){
+  .header .navbar-nav {
+    margin-bottom: 0px !important;
+    }
+  }
+  

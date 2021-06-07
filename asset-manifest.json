@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/LunchBox/static/css/main.bdac99bf.chunk.css",
+    "main.js": "/LunchBox/static/js/main.9319c698.chunk.js",
+    "main.js.map": "/LunchBox/static/js/main.9319c698.chunk.js.map",
+    "runtime-main.js": "/LunchBox/static/js/runtime-main.f157efcc.js",
+    "runtime-main.js.map": "/LunchBox/static/js/runtime-main.f157efcc.js.map",
+    "static/js/2.157e336e.chunk.js": "/LunchBox/static/js/2.157e336e.chunk.js",
+    "static/js/2.157e336e.chunk.js.map": "/LunchBox/static/js/2.157e336e.chunk.js.map",
+    "static/js/3.a1868bd3.chunk.js": "/LunchBox/static/js/3.a1868bd3.chunk.js",
+    "static/js/3.a1868bd3.chunk.js.map": "/LunchBox/static/js/3.a1868bd3.chunk.js.map",
+    "index.html": "/LunchBox/index.html",
+    "static/css/main.bdac99bf.chunk.css.map": "/LunchBox/static/css/main.bdac99bf.chunk.css.map",
+    "static/js/2.157e336e.chunk.js.LICENSE.txt": "/LunchBox/static/js/2.157e336e.chunk.js.LICENSE.txt",
+    "static/media/style-starter.css": "/LunchBox/static/media/promo.e3d3348f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f157efcc.js",
+    "static/js/2.157e336e.chunk.js",
+    "static/css/main.bdac99bf.chunk.css",
+    "static/js/main.9319c698.chunk.js"
+  ]
+}

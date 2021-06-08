@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
 
 const Order = () => {
     return (
@@ -44,6 +45,7 @@ const Order = () => {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </>
     )
 }

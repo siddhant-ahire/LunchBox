@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
 
 const Menu = () => {
     return (
@@ -425,18 +426,7 @@ const Menu = () => {
   </div>
   {/* //menu */}
   {/* footer */}
-  <section className="w3l-footer-16">
-    <div className="w3l-footer-16-main">
-      <div className="container">
-        <div className="row footer-p">
-          <div className="col-lg-4 pr-lg-5">
-            <a className="logo" href="index.html"><i aria-hidden="true" />Gharelu khana</a>
-            <p className="mt-4">Home made food with a great taste only at gkhana.com as known as Gharelu Khana.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Footer/>
 </div>
    
         </>

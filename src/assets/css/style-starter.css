@@ -15895,7 +15895,7 @@ h3.title-big {
 /* //blog section */
 /* call section */
 .w3l-call-to-action-6 .call-vv-action {
-  background: var(--bg-light);
+  /* background: var(--bg-light); */
 }
 
 .w3l-call-to-action-6 p {

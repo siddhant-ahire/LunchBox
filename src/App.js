@@ -1,26 +1,25 @@
 import './assets/css/style-starter.css';
 import './App.css';
 import Header from './components/Header/Header';
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Scroll from './Scroll'
-import SmoothScroll from './smoothScroll/smoothScroll'
 import Home from './pages/Home';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Menu from './pages/Menu';
 import Prices from './pages/Prices';
 import Order from './pages/Order';
 import Pay from './pages/Pay';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import ScrollToTop from './ScrollToTop'
 
 function App() {
 
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Scroll showBelow={250} />
-      {/* <SmoothScroll> */}
-        <Router>
           <Switch>
             <Route exact path="/"><Home /></Route>
             <Route exact path="/Menu"><Menu/></Route>
@@ -30,8 +29,6 @@ function App() {
             <Route exact path="/About"><AboutUs/></Route>
             <Route exact path="/Contact"><ContactUs/></Route>
           </Switch>
-        </Router>
-      {/* </SmoothScroll> */}
     </>
   );
 }

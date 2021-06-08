@@ -1,4 +1,7 @@
+import { LocalDining , HomeOutlined} from '@material-ui/icons'
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer/Footer'
 import Slider from '../components/Slider/Slider'
 
 
@@ -13,11 +16,11 @@ const Home = () => {
               <p>Swaad aisa raha na jaye, dam aisa budget me samaye.</p>
               <p>स्वाद ऐसा रहा न जाये, दाम ऐसा बजट में समाये|</p>
               <div className="mt-md-5 mt-4 mb-lg-0 mb-4">
-                <a className="btn button-style" href="#">View Our Menu</a>
+                <Link className="btn button-style" to="/Menu">View Our Menu</Link>
               </div>
             </div>
-            <div className="col-md-6 mt-md-0 mt-4">
-              <img className="img-fluid imgban" style={{ width: '90%', height: 'auto' }} src="assets/images/bannerimg.png" alt="" />
+            <div className="col-md-6 mt-md-0 mt-4 d-flex justify-content-center">
+              <img className="img-fluid imgban" style={{ width: '70%', height: 'auto' }} src="assets/images/bannerimg.png" alt="" />
             </div>
           </div>
         </div>
@@ -37,10 +40,10 @@ const Home = () => {
                 <a href="#image"><img src="assets/images/about.png" className="img-responsive antiimgban" style={{ width: '90%', height: 'auto' }} alt="content-photo" /></a>
               </div>
               <div className="col-lg-6 content-left mb-md-0 mb-3">
-                <h3>Welcome To  <span>Gharelu khana</span></h3>
+                <h3>Welcome To  <span>Home Made Tiffin</span></h3>
                 <p>Getting Home-made food that gives a homely taste is no more a dream.</p>
                 <p>We provide home made food with great taste at an affordable price. According to our customer reviews we provide no deduction in our quality and taste. The best part is we provide <span style={{ fontWeight: 'bold', fontSize: '16px', textDecoration: 'underline' }}>FREE DELIVERY</span></p>
-                <a className="btn button-style" href="#">Order Now!!!!! </a>
+                <Link className="btn button-style" to="/About">Know More... </Link>
               </div>
             </div>
           </div>
@@ -84,7 +87,7 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-6 columns">
                   <div className="icon-eff">
-                    <span className="fa fa-cutlery" aria-hidden="true" />
+                    <LocalDining />
                   </div>
                   <div className="right-side">
                     <p>We have Hygenic cooking environment and separate kitchen for Veg and Non-veg foods.</p>
@@ -93,7 +96,7 @@ const Home = () => {
                 </div>
                 <div className="col-md-6 columns mt-md-0 mt-4">
                   <div className="icon-eff">
-                    <span className="fa fa-coffee" aria-hidden="true" />
+                  <LocalDining />
                   </div>
                   <div className="right-side">
                     <p>Healthy and Fresh items that would meet your satisfaction.</p>
@@ -103,7 +106,7 @@ const Home = () => {
               <div className="row mt-md-5 mt-4">
                 <div className="col-md-6 columns">
                   <div className="icon-eff">
-                    <span className="fa fa-beer" aria-hidden="true" />
+                    <HomeOutlined />
                   </div>
                   <div className="right-side">
                     <p>Modest price with free delivery.</p>
@@ -111,7 +114,7 @@ const Home = () => {
                 </div>
                 <div className="col-md-6 columns  mt-md-0 mt-4">
                   <div className="icon-eff">
-                    <span className="fa fa-cutlery" aria-hidden="true" />
+                  <HomeOutlined />
                   </div>
                   <div className="right-side">
                     <p>We say no to maida We use only atta for your good health. </p>
@@ -124,21 +127,21 @@ const Home = () => {
       </section>
       {/* //team with grids section */}
       {/* call section */}
-      <section className="w3l-call-to-action-6">
+      <section className="w3l-call-to-action-6 container">
         <div className="call-vv-action py-5">
           <div className="container py-md-4 py-3">
             <div className="grid">
               <div className="float-lt">
-                <h3 className="title-big">Order now!</h3>
-                <p>Order now to get healthy and fresh food</p>
+                <h3 className="title-big">SUBSCRIBE NOW!</h3>
+                <p>Subscribe Now to get healthy and fresh food</p>
               </div>
               <div className="float-rt text-right">
                 <ul className="buttons">
-                  <li className="phone"><span className="fa fa-volume-control-phone mr-1" aria-hidden="true" />
-                    <a className="call-style-w3" href="#">033-40001465</a>
+                  {/* <li className="phone"><span className="fa fa-volume-control-phone mr-1" aria-hidden="true" />
+                    <Link className="call-style-w3" to="/Menu">033-40001465</Link>
                   </li>
-                  <li className="green">Or</li>
-                  <li><a href="menu.html" className="btn button-style fa fa-whatsapp">&nbsp;&nbsp;7059385646/ 9903341701</a></li>
+                  <li className="green">Or</li> */}
+                  <li><Link to="/Menu" className="btn button-style fa fa-whatsapp">&nbsp;&nbsp;7059385646/ 9903341701</Link></li>
                 </ul>
               </div>
             </div>
@@ -147,18 +150,7 @@ const Home = () => {
       </section>
       {/* //call section */}
       {/* footer */}
-      <section className="w3l-footer-16">
-        <div className="w3l-footer-16-main">
-          <div className="container">
-            <div className="row footer-p">
-              <div className="col-lg-4 pr-lg-5">
-                <a className="logo" href="index.html"><i aria-hidden="true" />Gharelu khana</a>
-                <p className="mt-4">Home made food with a great taste only at gkhana.com as known as Gharelu Khana.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <Footer/>
  
         </>
     )

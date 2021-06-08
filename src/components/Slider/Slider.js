@@ -2,6 +2,10 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import Item from "./Item";
 import "./Slider.css";
+import { PricingTable, PricingSlot, PricingDetail } from 'react-pricing-table';
+import { Link } from "react-router-dom";
+
+
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -12,10 +16,11 @@ const breakPoints = [
 
 export default function Slider() {
   return (
-    <section>
+    <>
+    <section className="container">
       <h1 style={{ textAlign: "center" }}>Menu Items</h1>
-      <div className="Slider">
-        <Carousel breakPoints={breakPoints}>
+      <div className="">
+        <Carousel className="rec-dot rec-pagination" breakPoints={breakPoints}>
           <Item>
           <div className="row menu-item">
               <div className="col-3 p-0 position-relative">
@@ -182,8 +187,59 @@ export default function Slider() {
         </Carousel>
       </div>
     <div className="mt-md-5 mt-4 mb-lg-0 mb-4" style={{textAlign:'center'}}>
-        <a className="btn button-style" href="#">Show More Items</a>
+        <Link className="btn button-style" to="/Menu">Show More Menu Items...</Link>
     </div>
     </section>
+    <section style={{marginTop:'40px'}} className="container">
+      <h1 style={{ textAlign: "center" ,marginBottom:'20px'}}>Prizing Plans</h1>
+    <div className="cardprices">
+          <PricingTable highlightColor='#28a745'>
+    <Carousel breakPoints={breakPoints}>
+          <PricingSlot buttonText='BOOK NOW' title='Trial' priceText='499/week'>
+            <PricingDetail> <b>2</b> chapati</PricingDetail>
+            <PricingDetail> <b>1</b> sabji</PricingDetail>
+            <PricingDetail> <b>Dal Rice</b> </PricingDetail>
+            <PricingDetail strikethrough> <b>Papad & Achar</b></PricingDetail>
+            <PricingDetail > <b>Home Delivery</b></PricingDetail>
+          </PricingSlot>
+          <PricingSlot  buttonText='BOOK NOW' title='Trial' priceText='599/week'>
+            <PricingDetail> <b>3</b> chapati</PricingDetail>
+            <PricingDetail> <b>1</b> sabji</PricingDetail>
+            <PricingDetail> <b>Dal Rice</b> </PricingDetail>
+            <PricingDetail> <b>Papad & Achar</b></PricingDetail>
+            <PricingDetail > <b>Home Delivery</b></PricingDetail>
+          </PricingSlot>
+          <PricingSlot   buttonText='Book Now' title='BASIC' priceText='2999/month'>
+          <PricingDetail> <b>2</b> chapati</PricingDetail>
+            <PricingDetail> <b>1</b> sabji</PricingDetail>
+            <PricingDetail> <b>Dal Rice</b> </PricingDetail>
+            <PricingDetail> <b>Papad & Achar</b></PricingDetail>
+            <PricingDetail strikethrough> <b>1 Day/week special</b></PricingDetail>
+            <PricingDetail> <b>Home Delivery</b></PricingDetail>
+          </PricingSlot>
+          <PricingSlot highlighted  buttonText='BOOK NOW' title='BASIC' priceText='3499/month'>
+          <PricingDetail> <b>3</b> chapati</PricingDetail>
+            <PricingDetail> <b>1</b> sabji</PricingDetail>
+            <PricingDetail> <b>Dal Rice</b> </PricingDetail>
+            <PricingDetail> <b>Papad & Achar</b></PricingDetail>
+            <PricingDetail> <b>1 Day/week special</b></PricingDetail>
+            <PricingDetail> <b>Home Delivery</b></PricingDetail>
+          </PricingSlot>
+          <PricingSlot  buttonText='BOOK NOW' title='BASIC' priceText='3999/month'>
+          <PricingDetail> <b>4</b> chapati</PricingDetail>
+            <PricingDetail> <b>2</b> sabji</PricingDetail>
+            <PricingDetail> <b>Dal Rice</b> </PricingDetail>
+            <PricingDetail> <b>Papad & Achar</b></PricingDetail>
+            <PricingDetail> <b>2 Day/week special</b></PricingDetail>
+            <PricingDetail> <b>Home Delivery</b></PricingDetail>
+          </PricingSlot>
+    </Carousel>
+          </PricingTable>
+    </div>
+    <div className="mt-md-5 mt-4 mb-lg-0 mb-4" style={{textAlign:'center'}}>
+        <Link className="btn button-style" to="/Prices">Show More Prizing Plans...</Link>
+    </div>
+    </section>
+    </>
   );
 }

@@ -14049,7 +14049,7 @@ a.text-dark:focus {
   --secondary-color: #0abf53;
   --primary-dark: #00070c;
   --font-color: #b7b7b7;
-  --bg-color: #131617;
+  --bg-color: #282c35;
   --heading-color: #fdfffc;
   --footer-color: #161623;
   --border-color: rgba(255, 255, 255, 0.2);
@@ -14078,6 +14078,8 @@ html {
   background: var(--bg-color);
   color: var(--font-color);
   font-family: 'Open Sans', sans-serif;
+  transition: all .3s linear !important;
+
 }
 
 body a,

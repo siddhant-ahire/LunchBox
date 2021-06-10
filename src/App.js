@@ -11,15 +11,16 @@ import Order from './pages/Order';
 import Pay from './pages/Pay';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
-import ScrollToTop from './ScrollToTop'
+import ScrollToTop from './ScrollToTop';
 
 function App() {
+
 
   return (
     <>
       <Header />
       <ScrollToTop />
-      <Scroll showBelow={250} />
+      <Scroll showBelow={10} />
           <Switch>
             <Route exact path="/"><Home /></Route>
             <Route exact path="/Menu"><Menu/></Route>

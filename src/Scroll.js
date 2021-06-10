@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import IconButton from '@material-ui/core/IconButton';
+import { useAuth } from './ContextAPI/ThemeProvider';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,15 +34,22 @@ const Scroll = ({
     showBelow,
 }) => {
 
+    const [auth, handleAuth,navbar, handleNavbar] = useAuth(useAuth);
     const classes = useStyles();
 
     const [show, setShow] = useState(showBelow ? false : true)
 
     const handleScroll = () => {
         if (window.pageYOffset > showBelow) {
-            if (!show) setShow(true)
+            if (!show) {
+                setShow(true); 
+                handleNavbar(true);
+            }
         } else {
-            if (show) setShow(false)
+            if (show) {
+                setShow(false);
+                handleNavbar(false);
+            }
         }
     }
 
@@ -55,6 +63,7 @@ const Scroll = ({
             return () => window.removeEventListener(`scroll`, handleScroll)
         }
     })
+
 
     return (
         <div>
